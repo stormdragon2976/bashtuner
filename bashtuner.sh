@@ -14,11 +14,15 @@ show_help() {
   echo "Usage: $0 tune_id"
   echo "Where tune_id is one of"
   echo "${!tuning[@]}"
+  echo "To advance to the next note, press any letter, enter and space do not work."
 exit 0
 }
 
 [ $# -ne 1  ] && show_help
 [ -z "${tuning[$1]}" ] && show_help
+[ "$1" == "-h" ] && show_help
+[ "$1" == "--help" ] && show_help
+
 # Continuously play the notes until a key is press.
 # Note key can not be enter or space.
 # This will adjust how long each note plays.
