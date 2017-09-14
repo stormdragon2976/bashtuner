@@ -9,9 +9,9 @@ declare -A tuning=(
   # Standard tuning
   [6e]="E2 A2 D3 G3 B3 E4"
   # 12 string dropped 1 step.
-  [12d]="D2 D3 G2 G3 C3 C4 F3 F4 A3 D4"
+  [12d]="D3 D2 G3 G2 C4 C3 F4 F3 A3 D4"
   # 12 string standard tuning
-  [12e]="E2 E3 A2 A3 D3 D4 G3 G4 B3 E4"
+  [12e]="E3 E2 A3 A2 D4 D3 G4 G3 B3 E4"
   # Mandolin
   [mandolin]="G3 D4 A4 E5"
 )
@@ -44,3 +44,6 @@ for i in ${tuning[$1]} ; do
   done
   IFS="$ifs"
 done
+# Kill the final process when the program exits.
+    ps $notePID &> /dev/null && kill $notePID &> /dev/null
+exit 0
