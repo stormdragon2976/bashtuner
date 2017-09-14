@@ -11,7 +11,7 @@ declare -A tuning=(
   # 12 string dropped 1 step.
   [12d]="D2 D3 G2 G3 C3 C4 F3 F4 A3 D4"
   # 12 string standard tuning
-  [6e]="E2 E3 A2 A3 D3 D4 G3 G4 B3 E4"
+  [12e]="E2 E3 A2 A3 D3 D4 G3 G4 B3 E4"
   # Mandolin
   [mandolin]="G3 D4 A4 E5"
 )
