@@ -18,6 +18,7 @@ declare -A tuning=(
   [12e]="E3 E2 A3 A2 D4 D3 G4 G3 B3 E4"
   # Mandolin
   [mandolin]="G3 D4 A4 E5"
+  [ukulele]="G4 C4 E4 A4"
 )
 
 show_help() {
