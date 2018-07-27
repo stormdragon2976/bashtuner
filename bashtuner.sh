@@ -19,6 +19,8 @@ declare -A tuning=(
   # Mandolin
   [mandolin]="G3 D4 A4 E5"
   [ukulele]="G4 C4 E4 A4"
+  #Nick Drake Tuning
+  [Nick-Drake-Tuning]="C2 G2 C3 F3 C4 E4"
 )
 export DIALOGOPTS='--insecure --no-lines --visit-items'
 
