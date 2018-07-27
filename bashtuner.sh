@@ -34,6 +34,7 @@ if [[ $# -eq 0 ]]; then
         --no-tags \
         --menu "Select tuning" 0 0 0 \
         $(for i in ${!tuning[@]} ; do echo "$i";echo "$i";done) --stdout)
+    [[ -z $1 ]] && exit 0
 fi
 
 [ $# -gt 1  ] && show_help
