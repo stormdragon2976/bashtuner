@@ -20,6 +20,7 @@ declare -A tuning=(
   [mandolin]="G3 D4 A4 E5"
   [ukulele]="G4 C4 E4 A4"
 )
+export DIALOGOPTS='--insecure --no-lines --visit-items'
 
 show_help() {
   echo "Usage: $0 tune_id"
@@ -28,7 +29,14 @@ show_help() {
 exit 0
 }
 
-[ $# -ne 1  ] && show_help
+if [[ $# -eq 0 ]]; then
+    set -- $(dialog --backtitle "Welcome to Bash Tuner" \
+        --no-tags \
+        --menu "Select tuning" 0 0 0 \
+        $(for i in ${!tuning[@]} ; do echo "$i";echo "$i";done) --stdout)
+fi
+
+[ $# -gt 1  ] && show_help
 [ -z "${tuning[$1]}" ] && show_help
 [ "$1" == "-h" ] && show_help
 [ "$1" == "--help" ] && show_help
