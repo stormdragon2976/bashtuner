@@ -27,6 +27,10 @@ declare -A tuning=(
 )
 export DIALOGOPTS='--insecure --no-lines --visit-items'
 
+flush_keys() {
+    read -st0.001 continue
+}
+
 show_help() {
   echo "Usage: $0 tune_id"
   echo "Where tune_id is one of"
@@ -48,7 +52,6 @@ fi
 [ "$1" == "--help" ] && show_help
 
 # Continuously play the notes until a key is press.
-# Note key can not be enter or space.
 # This will adjust how long each note plays.
 timeout=2
 for i in ${tuning[$1]} ; do
@@ -60,6 +63,7 @@ for i in ${tuning[$1]} ; do
     play -qnV0 synth $timeout pl $i &
     notePID="$!"
     read -sN1 -t $timeout continue
+    flush_keys
   done
   IFS="$ifs"
 done
