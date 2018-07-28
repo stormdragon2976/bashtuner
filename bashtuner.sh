@@ -28,7 +28,8 @@ declare -A tuning=(
 export DIALOGOPTS='--insecure --no-lines --visit-items'
 
 flush_keys() {
-    read -st0.001 continue
+    local keys
+    read -st0.001 keys
 }
 
 show_help() {
