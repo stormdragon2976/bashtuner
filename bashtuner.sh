@@ -10,6 +10,8 @@ declare -A tuning=(
   [6e]="E2 A2 D3 G3 B3 E4"
 #dadgad 6-string
 [dadgad]="D2 A2 D3 G3 A3 D4"
+  #Open D
+  [open-d]="D2 A2 D3 F#3 A3 D4"
 #drop D 6 String
 [drop-d]="D2 A2 D3 G3 B3 E4"
   #Drop DG
