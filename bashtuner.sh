@@ -26,6 +26,8 @@ declare -A tuning=(
   [mandolin]="G3 D4 A4 E5"
 #Ukulele
   [ukulele]="G4 C4 E4 A4"
+  #lap Steel 6 String C6
+  [steel-C6]="C3 E3 G3 A3 C4 E4"
   #Nick Drake Tuning
   [nick-drake-tuning]="C2 G2 C3 F3 C4 E4"
   #banjo
