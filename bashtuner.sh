@@ -12,6 +12,10 @@ declare -A tuning=(
 [dadgad]="D2 A2 D3 G3 A3 D4"
 #drop D 6 String
 [drop-d]="D2 A2 D3 G3 B3 E4"
+  #Drop DG
+  [Drop-dg]="D2 G2 D3 G3 B3 E4"
+  #Open G
+  [[open-g]]="D2 G2 D3 G3 B3 D4"
   # 12 string dropped 1 step.
   [12d]="D3 D2 G3 G2 C4 C3 F4 F3 A3 D4"
   # 12 string standard tuning
