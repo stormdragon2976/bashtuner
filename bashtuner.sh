@@ -33,6 +33,12 @@ declare -A tuning=(
   #banjo
   [banjo]="G4 D3 G3 B3 D4"
 )
+
+# For multi-language support
+export TEXTDOMAIN=bashtuner
+export TEXTDOMAINDIR=/usr/share/locale
+source gettext.sh
+
 export DIALOGOPTS='--insecure --no-lines --visit-items'
 
 flush_keys() {
