@@ -49,7 +49,7 @@ flush_keys() {
 show_help() {
   echo "$(eval_gettext "Usage: \$0 tune_id")"
   echo "$(gettext "Where tune_id is one of")"
-  echo "$(eval_gettext "\${!tuning[@]}")"
+  echo "${!tuning[@]}"
 exit 0
 }
 
