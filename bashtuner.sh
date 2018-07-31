@@ -47,16 +47,16 @@ flush_keys() {
 }
 
 show_help() {
-  echo "Usage: $0 tune_id"
-  echo "Where tune_id is one of"
-  echo "${!tuning[@]}"
+  echo "$(eval_gettext "Usage: \$0 tune_id")"
+  echo "$(gettext "Where tune_id is one of")"
+  echo "$(eval_gettext "\${!tuning[@]}")"
 exit 0
 }
 
 if [[ $# -eq 0 ]]; then
-    set -- $(dialog --backtitle "Welcome to Bash Tuner" \
+    set -- $(dialog --backtitle "$(gettext "Welcome to Bash Tuner")" \
         --no-tags \
-        --menu "Select tuning" 0 0 0 \
+        --menu "$(gettext "Select tuning")" 0 0 10 \
         $(for i in ${!tuning[@]} ; do echo "$i";echo "$i";done) --stdout)
     [[ -z $1 ]] && exit 0
 fi
