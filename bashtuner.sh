@@ -8,12 +8,12 @@ declare -A tuning=(
   [6d]="D2 G2 C3 F3 A3 D4"
   # Standard tuning
   [6e]="E2 A2 D3 G3 B3 E4"
-#dadgad 6-string
-[dadgad]="D2 A2 D3 G3 A3 D4"
+  #dadgad 6-string
+  [dadgad]="D2 A2 D3 G3 A3 D4"
   #Open D
   [open-d]="D2 A2 D3 F#3 A3 D4"
-#drop D 6 String
-[drop-d]="D2 A2 D3 G3 B3 E4"
+  #drop D 6 String
+  [drop-d]="D2 A2 D3 G3 B3 E4"
   #Drop DG
   [Drop-dg]="D2 G2 D3 G3 B3 E4"
   #Open G
@@ -24,7 +24,7 @@ declare -A tuning=(
   [12e]="E3 E2 A3 A2 D4 D3 G4 G3 B3 E4"
   # Mandolin
   [mandolin]="G3 D4 A4 E5"
-#Ukulele
+  #Ukulele
   [ukulele]="G4 C4 E4 A4"
   #lap Steel 6 String C6
   [steel-C6]="C3 E3 G3 A3 C4 E4"
@@ -32,6 +32,8 @@ declare -A tuning=(
   [nick-drake-tuning]="C2 G2 C3 F3 C4 E4"
   #banjo
   [banjo]="G4 D3 G3 B3 D4"
+  # Chromatic Scale, 2 octaves.
+  [chromatic-scale]="C2 C#2 D2 D#2 E2 F2 F#2 G2 G#2 A2 A#2 B2 C3 C#3 D3 D#3 E3 F3 F#3 G3 G#3 A3 A#3 B3 C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5"
 )
 
 # For multi-language support
