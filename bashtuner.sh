@@ -8,6 +8,8 @@ declare -A tuning=(
   [6d]="D2 G2 C3 F3 A3 D4"
   # Standard tuning
   [6e]="E2 A2 D3 G3 B3 E4"
+  # Half step down
+  [half-step-down]="D#2 G#2 C#3 F#3 A#3 D#4"
   #dadgad 6-string
   [dadgad]="D2 A2 D3 G3 A3 D4"
   #Open D
